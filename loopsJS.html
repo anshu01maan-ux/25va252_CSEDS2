@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in JS</title>
+</head>
+<body>
+    <script>
+        //JavaScript provides several types of loops to repeatedly execute a block of code. The choice of loop depends on whether you know the number of iterations beforehand or what type of data you are iterating over. 
+        //for.....Best used when you know the number of iterations
+        let studentList=["Anshumaan","Aman","Abhishek","Ansh","DM","Gorav"];
+        for(let i=0;i<studentList.length;i++)
+    {
+        console.log(studentList[i]);
+    }
+    //while----Repeats a block of code as long as a specified condition evaluates to true
+    let x=0;
+    while(x<studentList.length){
+    console.log(studentList[x]);
+    x++;
+    }
+    //for....of loop
+    //for...of loop: Iterates over the values of an iterable object, such as arrays,strings, maps, and sets. It's generally the easiest way to loop through an array.
+    for(let y of studentList){
+        console.log(y);
+    } 
+    let myInfo={name:"Anshumaan",age:"18",cource:"Btech",class:"CSEDS",section:"2",height:"5' 10''",passYear:"2029"};
+    for(let objKeys in myInfo){
+    console.log(myInfo[objKeys]);
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Conditional statements in JavaScript control the flow of execution,
+        //  allowing the program to make decisions and run different code blocks based on whether a condition is 
+        // true or false if......The most basic conditional, an if statement executes a block of code only 
+        // if the specified condition evaluates to true
+        let age=18;
+        if(age>=18)
+    {
+        console.log("Valid age for casting");
+    }
+    //if else
+    let myAge=45;
+    if(myAge<18){
+        console.log("Wait for next year");
+    }
+    else{
+        console.log("You are eligible for voting!");
+    }
+    //switch
+    //The switch statement is a cleaner alternative for comparing a single expression against multiple possible, 
+    // fixed values
+    let grade="A";
+    switch(grade)
+    {
+        case 'A':result="First Division";
+        break;
+        case 'B':result="Second Division";
+        break;
+        case 'C':result="Third Division";
+        break;
+        default:result="Fail";
+    }
+    console.log(result);
+    //if...else if...else Statement Used to test multiple conditions in sequence, this structure, often called 
+    // an "if-else ladder," executes the first block of code whose condition evaluates to true. 
+    // If none of the if or else if conditions are true, the final else block runs
+    let marks =45;
+    if(marks>60){
+        console.log("First Div");
+    }
+    else if(marks<60 && marks>=40){
+        console.log("second Div Marks");
+    }
+    else if(marks<40 && marks>=30)
+    {
+        console.log("Third Div Marks");
+    }
+    else{
+        console.log("Fail");
+    }
+    </script>
+</body>
+</html>

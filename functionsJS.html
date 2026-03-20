@@ -58,7 +58,70 @@
         function msg1(){
             console.log("Hello friend");
         }
-        setTimeout(msg1,2000)
+        setTimeout(msg1,2000);
+        //IIFE-
+        (function(a,b){
+            console.log(`First Parameter ${a} and Second Parameter ${b}`);
+            var res=a+b;
+            console.log(`Result is ${res}`);
+        })(4,5);
+        //short code using arrow function
+        (msg=>console.log("Hello IIFE"))();
+
+        //Promises:A Promise is an object representing the eventual result of an asynchronous operation.
+        let promise=new Promise(function(resolve,reject){
+            let age=25;
+            if(age>=18){
+                resolve("Valid Age");}
+                else{
+                    reject("wait for next year");
+            }
+        });
+        //console.log(promise);
+        promise
+        .then(msg=>console.log(msg))
+        .catch(error=>console.log(error));
+
+        //async await........the async and await keywords are modern syntax (introduced in ES2017)
+        //  that enable writing asynchronous code in a style that looks and reads like synchronous code       
+        async function userData() {
+            let response=await fetch('https://dummyjson.com/products/5');
+            let responseData=await response.json();
+            console.log(responseData);
+            document.writeln(responseData);
+            
+        }
+        userData();
+        //error handling using try catch
+        let myInfo={
+            name:"John",
+            age:"23",
+            mob:2358741589,
+            eMail:"john456@gmail.com"
+        }
+        //convert the object into JSON String
+        let myInfoData=JSON.stringify(myInfo);
+
+        //set data
+        localStorage.setItem('preference',myInfoData);
+        // Retreiving and parsing the object back
+        let getMyInfoData=localStorage.getItem('preference');
+        //parse the object
+        const finalData=JSON.parse(getMyMyInfoData);
+        console.log(finalData.name);
+
+        /** Higher Order Function:-
+         map() filter() reduce()
+        //  A higher-order function in JavaScript is a function that does at least one of the following: 
+       // Takes one or more functions as arguments (these are often called callback functions).
+        //Returns a function as its resultforEach()
+        map(): Transforms data by creating a new array from the results of a function.
+        filter(): Creates a new array with elements that pass a test.
+        reduce(): Aggregates array data into a single value.
+        forEach(): Executes a function for each element, often for side effects.
+        some() and every(): Check if elements meet specific conditions.**/
+        
+
         </script>
 </body>
 </html>
